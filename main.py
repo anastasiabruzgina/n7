@@ -14,6 +14,13 @@ def merge(*arrs):
         
     return merge(less) + [const] + merge(greater)
 
+def kbig(a, k):
+    i = 1
+    while i < k:
+        a.remove(max(a))
+        i +=1
+    return max(a)
+
 def sort_sentence(sentence):
     import operator
     a = sentence.split(' ')
